@@ -44,7 +44,7 @@ class ProfileScreen extends StatelessWidget {
                             height: 10.0,
                           ),
                           Text(
-                            'Genta Gledek',
+                            'Genta Halilintar',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 25,

@@ -45,30 +45,57 @@ class __SettingState extends State<_Setting> {
       body: SettingsList(
         sections: [
           SettingsSection(
-              title: Text(
-                'Opsi 1',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline6!
-                    .copyWith(fontWeight: FontWeight.w500, color: Colors.black),
+            title: Text(
+              'Opsi 1',
+              style: Theme.of(context)
+                  .textTheme
+                  .headline6!
+                  .copyWith(fontWeight: FontWeight.w500, color: Colors.black),
+            ),
+            tiles: <SettingsTile>[
+              SettingsTile.navigation(
+                leading: Icon(Icons.language),
+                title: Text('Bahasa'),
+                value: Text('Indonesia'),
               ),
-              tiles: <SettingsTile>[
-                SettingsTile.navigation(
-                  leading: Icon(Icons.language),
-                  title: Text('Bahasa'),
-                  value: Text('Indonesia'),
-                ),
-                SettingsTile.switchTile(
-                  initialValue: true,
-                  title: Text('Pilih mode disini'),
-                  leading: Icon(Icons.format_paint),
-                  onToggle: (value) {
-                    setState(() {
-                      isSwitched = value;
-                    });
-                  },
-                )
-              ])
+              SettingsTile.switchTile(
+                initialValue: true,
+                title: Text('Pilih mode disini'),
+                leading: Icon(Icons.format_paint),
+                onToggle: (value) {
+                  setState(() {
+                    isSwitched = value;
+                  });
+                },
+              )
+            ],
+          ),
+          SettingsSection(
+            title: Text(
+              'Opsi 2',
+              style: Theme.of(context)
+                  .textTheme
+                  .headline6!
+                  .copyWith(fontWeight: FontWeight.w500, color: Colors.black),
+            ),
+            tiles: <SettingsTile>[
+              SettingsTile.navigation(
+                title: Text('Keamanan'),
+                leading: Icon(Icons.lock),
+                value: Text('Sidik Jari'),
+              ),
+              SettingsTile.switchTile(
+                initialValue: false,
+                onToggle: (value) {
+                  setState(() {
+                    isSwitched;
+                  });
+                },
+                title: Text('Gunakan sidik jari'),
+                leading: Icon(Icons.fingerprint),
+              )
+            ],
+          )
         ],
       ),
     );
