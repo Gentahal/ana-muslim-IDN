@@ -8,6 +8,7 @@ class DetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('detail ' + content.image);
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -28,12 +29,12 @@ class DetailScreen extends StatelessWidget {
                                 offset: Offset(0.0, 0.0),
                                 blurRadius: 6.0)
                           ]),
-                      child: Hero(
-                        tag: content.image,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(30.0),
-                          child: Image(
-                            image: AssetImage(content.image),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(30.0),
+                        child: Hero(
+                          tag: content.image,
+                          child: Image.asset(
+                            content.image,
                             fit: BoxFit.cover,
                           ),
                         ),

@@ -1,4 +1,5 @@
 import 'package:ana_muslim/models/Content.dart';
+import 'package:ana_muslim/screen/components/content_app.dart';
 import 'package:ana_muslim/screen/components/section_title.dart';
 import 'package:ana_muslim/screen/detail.dart';
 import 'package:ana_muslim/screen/home.dart';
@@ -29,17 +30,7 @@ class IlmuSunnah extends StatelessWidget {
               (index) => Padding(
                 padding: const EdgeInsets.only(left: 16.0),
                 child: ContentApp(
-                  image: ilmuSunnah[index].image,
-                  title: ilmuSunnah[index].title,
-                  bgColor: ilmuSunnah[index].bgColor,
-                  press: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>
-                              DetailScreen(content: ilmuSunnah[index])),
-                    );
-                  },
+                  content: ilmuSunnah[index],
                 ),
               ),
             ),

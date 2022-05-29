@@ -30,15 +30,8 @@ class IlmuFiqih extends StatelessWidget {
               (index) => Padding(
                 padding: const EdgeInsets.only(left: 16.0),
                 child: ContentApp(
-                  image: ilmuFikih[index].image,
-                  title: ilmuFikih[index].title,
-                  bgColor: ilmuFikih[index].bgColor,
-                  press: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => DetailScreen(content: ilmuFikih[index],)),
-                    );
-                  },
+                  content: ilmuFikih[index],
+                
                 ),
               ),
             ),
