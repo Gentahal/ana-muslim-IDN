@@ -39,7 +39,7 @@ class _BodyNavState extends State<BodyNav> {
     });
   }
 
-  final List<Widget> _allContent = [HomeScreen(),BookMarkScreen(),SettingScreen()];
+  final List<Widget> _allContent = [HomeScreen(),BookmarkScreen(onTap: () {  },),SettingScreen()];
 
   @override
   Widget build(BuildContext context) {

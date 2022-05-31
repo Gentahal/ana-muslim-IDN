@@ -43,7 +43,7 @@ class DetailScreen extends StatelessWidget {
                     Container(
                       margin: EdgeInsets.only(top: 4.0),
                       child: Padding(
-                        padding: const EdgeInsets.all(10.0),
+                        padding: const EdgeInsets.all(15.0),
                         child: Text(
                           content.desc,
                           textAlign: TextAlign.justify,
